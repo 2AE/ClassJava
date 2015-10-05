@@ -6,6 +6,7 @@
 package com.mycompany.parcautomobile;
 
 import com.vaadin.data.util.BeanItemContainer;
+import java.util.List;
 
 
 /**
@@ -19,7 +20,7 @@ public class Vehicule {
     private String modele;
     private double prix;
     private static BeanItemContainer<Vehicule> vehicules = new BeanItemContainer<>(Vehicule.class);
-
+    
     public Vehicule() {
     }
 
@@ -66,5 +67,14 @@ public class Vehicule {
     public static BeanItemContainer<Vehicule> getVehicules() {
         return vehicules;
     }
-
+    public static BeanItemContainer<Vehicule> getVehiculesPrixBas() {
+        List<Vehicule> lesVehiculesPrixBas = null;
+        List<Vehicule> listeVehicule =(List<Vehicule>) vehicules.getItemIds();
+        for( Vehicule unVehicule : listeVehicule){
+            if(unVehicule.prix <= 12000){
+                lesVehiculesPrixBas.add(unVehicule);
+            }
+        } 
+        return (BeanItemContainer<Vehicule>) lesVehiculesPrixBas;
+    }   
 }
