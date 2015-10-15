@@ -72,7 +72,7 @@ public class Vehicule {
         List<Vehicule> lesVehiculesPrixBas = null;
         List<Vehicule> listeVehicule =(List<Vehicule>) vehicules.getItemIds();
         for( Vehicule unVehicule : listeVehicule){
-            if(unVehicule.prix <= 12000){
+            if(12000 > unVehicule.prix){
                 lesVehiculesPrixBas.add(unVehicule);
             }
         } 
