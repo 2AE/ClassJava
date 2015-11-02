@@ -4,7 +4,7 @@ TESTAS
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.parcautomobile;
+package Metier;
 
 import static com.mycompany.parcautomobile.Visiteur.unVisiteur;
 import com.vaadin.data.util.BeanItemContainer;
