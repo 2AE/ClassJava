@@ -30,8 +30,8 @@ import javax.servlet.annotation.WebServlet;
 @Widgetset("com.mycompany.parcautomobile.MyAppWidgetset")
 public class MyUI extends UI {
 
-    private Grid contactList = new Grid();
-    private Table contactTable = new Table();
+    private final Grid contactList = new Grid();
+    private final Table contactTable = new Table();
 
     @Override
     protected void init(VaadinRequest vaadinrequest) {
@@ -45,7 +45,6 @@ public class MyUI extends UI {
         Vehicule vehicule1 = new Vehicule(1, "Renault", "Clio", 10000);
         Vehicule vehicule2 = new Vehicule(2, "Audi", "A8", 12500);
         Vehicule vehicule3 = new Vehicule(3, "Toyota", "Yaris", 15005);
-
         contactList.setContainerDataSource(Vehicule.getVehicules());
 
         //contactTable.setContainerDataSource(new BeanItemContainer<>( Vehicule.class));
@@ -53,6 +52,18 @@ public class MyUI extends UI {
         contactList.removeColumn("id");  // masquer la colonne
         //  contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
         contactList.setSizeFull();
+        
+        Visiteur Visiteur1 = new Visiteur(1, "Arejdal", "Abdel","saint-Etienne" 42000);
+        Visiteur Visiteur2 = new Visiteur(2, "Gallet", "Emile","Saint-Etienne" 42100);
+        Visiteur Visiteur2 = new Visiteur(3, "Chiter", "Adem", "Saint-Etienne" 42000);
+        contactList.setContainerDataSource(Visiteur.getVisiteur());
+
+        //contactTable.setContainerDataSource(new BeanItemContainer<>( Vehicule.class));
+        contactList.setColumnOrder("nom", "prenom", "adresse", "codePostal");  // choisir l'ordre des colonnes
+        contactList.removeColumn("id");  // masquer la colonne
+        //  contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
+        contactList.setSizeFull();
+        
 
     }
 

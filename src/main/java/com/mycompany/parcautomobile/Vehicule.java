@@ -6,7 +6,9 @@ TESTAS
  */
 package com.mycompany.parcautomobile;
 
+import static com.mycompany.parcautomobile.Visiteur.unVisiteur;
 import com.vaadin.data.util.BeanItemContainer;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -15,12 +17,13 @@ import java.util.List;
  * @author user
  */
 public class Vehicule {
-
+    static Object unVehicule;
     private int id;
     private String marque;
     private String modele;
     private double prix;
     private static BeanItemContainer<Vehicule> vehicules = new BeanItemContainer<>(Vehicule.class);
+    private static BeanItemContainer<unVisiteur> unVisiteur = new BeanItemContainer<>(unVisiteur.class);
     
     public Vehicule() {
     }
@@ -77,5 +80,7 @@ public class Vehicule {
             }
         } 
         return (BeanItemContainer<Vehicule>) lesVehiculesPrixBas;
-    }   
+    }
+    
+    
 }
