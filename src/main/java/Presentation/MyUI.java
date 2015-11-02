@@ -1,5 +1,6 @@
-package com.mycompany.parcautomobile;
+package Presentation;
 
+import Metier.Vehicule;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.annotations.Widgetset;
@@ -40,11 +41,6 @@ public class MyUI extends UI {
     }
 
     private void configureComponents() {
-
-        // Chargement des données.
-        Vehicule vehicule1 = new Vehicule(1, "Renault", "Clio", 10000);
-        Vehicule vehicule2 = new Vehicule(2, "Audi", "A8", 12500);
-        Vehicule vehicule3 = new Vehicule(3, "Toyota", "Yaris", 15005);
 
         contactList.setContainerDataSource(Vehicule.getVehicules());
 
