@@ -27,8 +27,7 @@ import javax.servlet.annotation.WebServlet;
 /**
  *
  */
-@Theme("mytheme")
-@Widgetset("com.mycompany.parcautomobile.MyAppWidgetset")
+
 public class MyUI extends UI {
 
     private final Grid contactList = new Grid();
@@ -42,13 +41,12 @@ public class MyUI extends UI {
 
     private void configureComponents() {
 
-<<<<<<< HEAD:src/main/java/com/mycompany/parcautomobile/MyUI.java
+
         // Chargement des données.
         Vehicule vehicule1 = new Vehicule(1, "Renault", "Clio", 10000);
         Vehicule vehicule2 = new Vehicule(2, "Audi", "A8", 12500);
         Vehicule vehicule3 = new Vehicule(3, "Toyota", "Yaris", 15005);
-=======
->>>>>>> 6eff347e5e18166d11491287bf95b4f04cf920b2:src/main/java/Presentation/MyUI.java
+
         contactList.setContainerDataSource(Vehicule.getVehicules());
 
         //contactTable.setContainerDataSource(new BeanItemContainer<>( Vehicule.class));
